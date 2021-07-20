@@ -118,11 +118,12 @@ def city():
                 city3 = input("请输入三级地区：")
                 if city3 in data[city1][city2]:
                     print_place(data[city1][city2][city3])
-                    user = input("是否要购物：y/n")
-                    if user == "y":
-                        shopping()
-                    else:
-                        print("确定不买点特产？")
+                    while Tuer:
+                        user = input("是否要购物：y/n")
+                        if user == "y":
+                            shopping()
+                        else:
+                            print("确定不买点特产？")
                 else:
                     print("您输入的三级地区不存在！请从新输入")
        

@@ -27,7 +27,7 @@ runner.run(tests)
 
 sender = '1209812066@qq.com'  # 发件人邮箱账号
 my_pass = 'wpqkwbchhlocghhe'  # 发件人邮箱授权码
-user = '1950722212@qq.com'  # 收件人邮箱账号
+user = '2431320433@qq.com'  # 收件人邮箱账号
 
 msg = MIMEMultipart()  # 创建一个邮件
 msg['From'] = formataddr(["",sender])  # 括号里对应发件人邮箱昵称、发件人邮箱账号
@@ -38,7 +38,7 @@ server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务
 server.login(sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
 
 # 发送附件
-att = MIMEText(open('testAdd.txt','rb').read(), 'base64', 'utf-8')  # 构造附件，三个参数：第一个为附件路径，第二个附件格式，第三个附件设置编码utf-8
+att = MIMEText(open('计算器.txt','rb').read(), 'base64', 'utf-8')  # 构造附件，三个参数：第一个为附件路径，第二个附件格式，第三个附件设置编码utf-8
 att["Content-Type"] = 'application/octet-stream'
 att["Content-Disposition"] = "attachment; filename=test.html"  # filename为文件名字
 msg.attach(att)
